@@ -1,0 +1,34 @@
+{
+  "name": "koa-auto-path-router",
+  "description": "Auto path router serving middleware for koa",
+  "version": "1.0.1",
+  "keywords": [
+    "koa",
+    "router",
+    "node",
+    "javascript"
+  ],
+  "author": {
+    "name": "赵晓强",
+    "email": "longze_xq@163.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/longze/koa-auto-path-router.git"
+  },
+  "dependencies": {
+    "debug": "*",
+    "koa-send": "^3.2.0"
+  },
+  "devDependencies": {
+    "istanbul": "0",
+    "koa": "2",
+    "mocha": "2",
+    "supertest": "1"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "license": "MIT"
+}

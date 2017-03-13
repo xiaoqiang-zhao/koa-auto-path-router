@@ -1,0 +1,7 @@
+node_modules
+dist/index.js
+.DS_Store
+.svn
+*.log
+.idea
+issue.info
