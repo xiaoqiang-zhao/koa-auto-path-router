@@ -1,7 +1,7 @@
 {
   "name": "koa-auto-path-router",
   "description": "Auto path router serving middleware for koa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "koa",
     "router",

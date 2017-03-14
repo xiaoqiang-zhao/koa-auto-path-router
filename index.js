@@ -25,7 +25,7 @@ function mock(root) {
 
     assert(root, 'root directory is required to serve files');
 
-    const root = resolve(root);
+    root = resolve(root);
 
     return async function (ctx, next) {
         const path = ctx.path;
