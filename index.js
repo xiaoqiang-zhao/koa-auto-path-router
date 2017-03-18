@@ -27,12 +27,6 @@ function mock(root) {
 
     root = resolve(root);
 
-    return async function (ctx, next) {
-        const path = ctx.path;
-        ctx.body = await getData ('/' + ctx.method + path);
-        next();
-    };
-
     function getData (path) {
         let body;
         const absolutePath = root + path + '/index.js';
@@ -47,4 +41,10 @@ function mock(root) {
 
         return body;
     }
+
+    return async function (ctx, next) {
+        const path = ctx.path;
+        ctx.body = await getData ('/' + ctx.method + path);
+        next();
+    };
 }
