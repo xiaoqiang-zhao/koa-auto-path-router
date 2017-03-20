@@ -14,6 +14,22 @@ const assert = require('assert');
 
 module.exports = mock;
 
+
+function getData (rootPath, path, ctx) {
+    let body;
+    const absolutePath = rootPath + path + '/index.js';
+
+    if(fs.existsSync(absolutePath)) {
+        body = require(absolutePath)(ctx);
+        delete require.cache[absolutePath];
+    }
+    else {
+        body = 'can not find the path: ' + absolutePath;
+    }
+
+    return body;
+}
+
 /**
  * auto path router from `root`.
  *
@@ -21,30 +37,18 @@ module.exports = mock;
  * @return {Function}
  * @api public
  */
-function mock(root) {
+function mock(rootPath) {
 
-    assert(root, 'root directory is required to serve files');
+    assert(rootPath, 'root path directory is required to serve files');
 
-    root = resolve(root);
-
-    function getData (path) {
-        let body;
-        const absolutePath = root + path + '/index.js';
-
-        if(fs.existsSync(absolutePath)) {
-            body = require(absolutePath)();
-            delete require.cache[absolutePath];
-        }
-        else {
-            body = 'can not find the path: ' + absolutePath;
-        }
-
-        return body;
-    }
+    rootPath = resolve(rootPath);
 
     return async function (ctx, next) {
         const path = ctx.path;
-        ctx.body = await getData ('/' + ctx.method + path);
+        var body = await getData(rootPath, '/' + ctx.method + path, ctx);
+        if (body) {
+            ctx.body = body;
+        }
         next();
     };
 }

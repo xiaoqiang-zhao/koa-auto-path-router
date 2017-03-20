@@ -5,3 +5,4 @@ dist/index.js
 *.log
 .idea
 issue.info
+mochawesome-reports/
