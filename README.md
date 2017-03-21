@@ -1,6 +1,8 @@
 # koa-auto-path-router
 
- Koa auto path middleware, no need to write every router. The rule like this:
+[中文文档](./Readme-ch.md)
+
+Koa auto path middleware(just for Koa 2), no need to write every router. The rule like this:
 
 GET `/a` -> `/GET/a/index.js`
 
@@ -81,8 +83,6 @@ module.exports = function (ctx) {
     ctx.request.body
 };
 ```
-
-## Others
 
 ## License
 
