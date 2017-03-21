@@ -1,6 +1,6 @@
 # koa-auto-path-router
 
-[English Readme](./README.md)
+[English Readme](https://github.com/longze/koa-auto-path-router/blob/master/README.md)
 
 Koa 自动路由的中间件(只针对 Koa 2有效稍后解释原因)，解决的主要问题就是省略路由配置文件，路由和功能的对应采用一种逻辑关系，规则如下：
 

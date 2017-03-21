@@ -1,6 +1,6 @@
 # koa-auto-path-router
 
-[中文文档](./Readme-ch.md)
+[中文文档](https://github.com/longze/koa-auto-path-router/blob/master/README-CH.md)
 
 Koa auto path middleware(just for Koa 2), no need to write every router. The rule like this:
 
