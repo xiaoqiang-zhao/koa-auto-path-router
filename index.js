@@ -40,7 +40,6 @@ function getData (rootPath, path, ctx) {
 function mock(rootPath) {
 
     assert(rootPath, 'root path directory is required to serve files');
-
     rootPath = resolve(rootPath);
 
     return async function (ctx, next) {

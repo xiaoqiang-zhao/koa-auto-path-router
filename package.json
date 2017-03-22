@@ -1,7 +1,10 @@
 {
   "name": "koa-auto-path-router",
-  "description": "Auto path router serving middleware for koa，just for Koa 2",
   "version": "1.2.0",
+  "description": "Auto path router serving middleware for koa，just for Koa 2",
+  "scripts": {
+    "test": "node ./node_modules/.bin/mocha --harmony"
+  },
   "keywords": [
     "koa",
     "router",
@@ -16,10 +19,6 @@
     "type": "git",
     "url": "git://github.com/longze/koa-auto-path-router.git"
   },
-  "dependencies": {
-    "debug": "*",
-    "koa-send": "^3.2.0"
-  },
   "devDependencies": {
     "expect.js": "^0.3.1",
     "koa": "2",
@@ -28,6 +27,9 @@
     "mochawesome": "^2.0.4",
     "should": "^11.2.1",
     "supertest": "^3.0.0"
+  },
+  "peerDevDependencies": {
+    "koa": "2"
   },
   "engines": {
     "node": ">= 7.1.6",
