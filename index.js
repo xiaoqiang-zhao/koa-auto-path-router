@@ -11,17 +11,21 @@ const assert = require('assert');
 /**
  * Expose `mock()`.
  */
-
 module.exports = mock;
 
-
-function getData (rootPath, path, ctx) {
+function getData(rootPath, path, ctx) {
     let body;
     const absolutePath = rootPath + path + '/index.js';
 
-    if(fs.existsSync(absolutePath)) {
-        body = require(absolutePath)(ctx);
-        delete require.cache[absolutePath];
+    if (fs.existsSync(absolutePath)) {
+        try {
+            body = require(absolutePath)(ctx);
+            delete require.cache[absolutePath];
+        }
+        catch (e) {
+            console.log(e);
+        }
+
     }
     else {
         body = 'can not find the path: ' + absolutePath;
