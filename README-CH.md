@@ -87,6 +87,10 @@ module.exports = function (ctx) {
 };
 ```
 
+## 测试
+
+    npm run test
+
 ## License
 
 MIT

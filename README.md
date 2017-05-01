@@ -83,6 +83,9 @@ module.exports = function (ctx) {
     ctx.request.body
 };
 ```
+## Test
+
+    npm run test
 
 ## License
 
