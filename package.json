@@ -3,8 +3,8 @@
   "version": "1.2.0",
   "description": "Auto path router serving middleware for koa，just for Koa 2",
   "scripts": {
-    "test": "node ./node_modules/.bin/mocha --harmony",
-    "demo": "node --harmony ./demo"
+    "test": "node ./node_modules/.bin/mocha",
+    "demo": "node ./demo"
   },
   "keywords": [
     "koa",
@@ -33,7 +33,7 @@
     "koa": "2"
   },
   "engines": {
-    "node": ">= 7.1.6",
+    "node": ">= 8.0.0",
     "npm": ">= 3.0.0"
   },
   "license": "MIT"
