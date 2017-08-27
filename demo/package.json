@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "author": "longze",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-auto-path-router": "^1.2.0"
+  }
+}

@@ -3,7 +3,8 @@
   "version": "1.2.0",
   "description": "Auto path router serving middleware for koa，just for Koa 2",
   "scripts": {
-    "test": "node ./node_modules/.bin/mocha --harmony"
+    "test": "node ./node_modules/.bin/mocha --harmony",
+    "demo": "node --harmony ./demo"
   },
   "keywords": [
     "koa",

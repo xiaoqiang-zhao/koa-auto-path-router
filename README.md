@@ -28,8 +28,8 @@ app.use(require('koa-auto-path-router')(root));
 
 ```js
 const koaAutoPathRouter = require('koa-auto-path-router');
-const koa = require('koa');
-const app = koa();
+const Koa = require('koa');
+const app = new Koa();
 
 app.use(koaAutoPathRouter('./mock/'));
 ```
@@ -83,6 +83,14 @@ module.exports = function (ctx) {
     ctx.request.body
 };
 ```
+
+## Demo
+
+    cd demo
+    npm install
+    cd ..
+    npm run demo
+
 ## Test
 
     npm run test

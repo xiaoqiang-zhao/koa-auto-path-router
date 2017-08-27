@@ -45,7 +45,7 @@ function mock(rootPath) {
 
     assert(rootPath, 'root path directory is required to serve files');
     rootPath = resolve(rootPath);
-
+    
     return async function (ctx, next) {
         const path = ctx.path;
         var body = await getData(rootPath, '/' + ctx.method + path, ctx);
